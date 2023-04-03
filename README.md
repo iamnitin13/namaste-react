@@ -1,3 +1,3 @@
 # namaste-react
 
-Namaste react series...
+Namaste react series... 🚀
