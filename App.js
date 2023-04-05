@@ -1,3 +1,7 @@
+// importing the module or package the we have install (react and react-dom);
+import React from "react";
+import ReactDOM from "react-dom/client"; //earlier it was from react-dom
+
 /**
  *
  * crete a nested structure in react
