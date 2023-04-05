@@ -1,0 +1,26 @@
+1. Emmet: it an webdevlopment tool supported by ide(i.e Vscode) that help you write code efficently and quickly.
+   example: (ui>li\*3) it an abbreviation that will convert this in full code like <ul><li></li><li></li><li></li></ul> like this;
+   it can used to write repatitive code by just using these abbrev. & it also have differnt support that makes dev fast and error free.
+
+2. library vs framework: library are the pre-written code that can be used inside our application to develop the specific feature or entire application; it contain the already existing code ;so we can reused that code instead of writing them from scratch.
+   framework: framework is bit more advance and comprehenssive than library instead of providing certail functionlity it define a set of structure to the application; it provide completes set of solution; it include other library and component that work together to build the application; not suitable for building any certain feature(use library for that); if you want the build an application with some preexisting setup and in a environment that framework provided
+   jquery,reactjs,numpy....these are the library(they can we used inside framework also, or in a small part of the application)
+   angular,ruby....these are framework.
+
+3. CDN: content delivry network; consist of set of server located across differnt location; it is used to provide the content (i,e image ,html,css,js or any content) in fast way to the end user from there nearest location server. it is fast reliable scalble, it prevent the applicatiion to crashed; as request can be distributed to differnt servers based on the user location. it caches the request sources for faster delivery;
+   we config our application to use cdn url instead of original, host the resource on cdn provider; so when a request is made it check if it cached the resource then delivey otherwise it fetch the origin server (actual server where the resouce was orginally hosted) and cache them for future.
+
+4. React term is originated from reactive programming; in react we decalre the component (describe how it will look like); & the updation of our state in the componnet is handle by react; it automatically update the component when there is data change to make it interactive.
+   reactive promagramming ; when there is change in data it react and update itself; as and devs we just need to decalre our component and hanling state; it react job how it will the component and render them in our browser.
+
+5. crossorigin in script tag: it is used for sharing the cors from differnt orign or domain.
+   crossorigin anyonmous added origin to header requesting for cross origin resouce sharing; and server decide weather to allow based on the origin specified in the header.
+   crossorigin use-credentials; it set the origin and cookies that these request is having to send to server for authenicating or access-control.
+
+6. React is responsible for the component logic creating and mainting resuable ui component and theire state, while ReactDOM handles the rendering and updating of those components in the browser's DOM.
+
+7. differences between the react.development.js and react.production.js versions are related to performance and debugging.
+
+8. these are the boolean attribute to laod the external script efficietly into our page:-
+   8.1. async should be used when the order of execution does not matter; as soon the script tag is available it download and extuced the script even the browser parse the html; useful for script that don't have any depecndey; it is a non-blocking
+   8.2. defer should be used when the order of execution matters or when scripts need to access the DOM; it download the script but executed when parsing is done it is a blocking.
