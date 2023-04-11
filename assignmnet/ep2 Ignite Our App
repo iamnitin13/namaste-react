@@ -29,6 +29,6 @@
 
 14. vite,webpack & parcel: all these are js bunlder; they do similar thing but have different algorithm of doing these thing; webpack is a configation based bunlder; vite is a fast, lightweighted , instant server support; parcel: is config less bundler it auto detect the file and support more feature as HMR,caching,tree-shaking,code-spilitting and lot more.
 
-15. ^ caret & ~ tilde: - these are sermetic versioning symbol that is provided to install the minor or patch update when install, caret is default symbol as used it update whenever any patch(bug fixes) or minor features update; tilde will update when only patch update are available. It will update to major version even if it available.
+15. ^ caret & ~ tilde: - these are sermetic versioning symbol that is provided to install the minor or patch update when install, caret is default symbol as used it update whenever any patch(bug fixes) or minor features update; tilde will update when only patch update are available. It will not update to major version even if it available.
 
 16. script types: script are normal regular js file that are used to add dynamic behaviour to webpage; that doesn't support import & export feature, provide `type=module`;make js as a module that can share and reuse code by using (importing & exporting) ; but it will work on supported browser; some old browser not support module(so provide fallback)`nomodule` it tell that excute the below script if it not support type module
