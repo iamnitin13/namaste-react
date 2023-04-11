@@ -1,0 +1,23 @@
+script in package.json is a reserved keyword used to run the command specficed with key and value. i.e `'start:parcel index.html`; we can directly run this cmd with the use of script; `npm run start` or `npm start`.Behind will run the cmd the we passed to this key `start`, run is used for custom keys.
+
+React.creatElement ===> Object ====> HTMl Element (when render to DOM).
+
+==> ReactDOM render method will `replace` the content inside the react root that we have created using ReactDOM.createRoot();NOTE: it will replace not append WHY? after making the dom element as react root container nowonward reactdom will take control of this everything happen inside this will be done by reactdom.
+
+JSX==> `javascript xml` js syntax to create react element which is easier; not part of reactjs ;we can even create element and use react without jsx; NOTE: the syntax might look similar to HTML ; but it is not HTML it is JSX and a valid syntax(HOW? it is valid). It is at the end is like what reactcreatelment return it return js object with all of those attribute & children. How? JSX alone is not a valid js (it use transpile (`BABEL`) your code to reactjs understandle code) that browser can understand at the end.
+
+BABEL#(JSX) ===> React.creatElement ===> Object ====> HTMl Element (when render to DOM).
+
+Babel😈 is transform toolchainl it convert jsx elment to react.element, it also provide backward compatibli for es6 feature by converting to code that old & current browser understand. It at the end is the js code that take some code transpile it to another one.
+
+jsx element vs html diff; className not class; attribute will have camelCase not kebab-case.
+
+multiline wrap the jsx element inside `()` babel know where it starting and ending.
+
+Component -- resusable piece of code that are used to create the UI, (just like js function that may take some input and based on that input return some output for `functional Component`), Component is similar to that it is a function a normal js function that accept `props` as input(not neccesary it must have props or it should be resuable to make it component) and return the `jsx element`.
+
+Two Types: `Class based` (old & less use nowaday) & `Functional based`
+root.render on transpile treated Functional or Class component as jsx elemnet that need to convertd into react element.
+It accept `one root container` or one root elment wrap other component inside the root ; like we did when creating nested element
+root container :- `<></>` or `<React.Fragement></React.Fragement>`
+these two will not create an extra element inside the DOM.

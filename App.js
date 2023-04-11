@@ -26,23 +26,53 @@ import ReactDOM from "react-dom/client"; //earlier it was from react-dom
 
 //creating a nested structure describe in the above
 
-const e = React.createElement;
+// const e = React.createElement;
 
-const nested = e(
-  "div",
-  { id: "parent" },
-  e(
-    "div",
-    { id: "child" },
-    e("h1", null, "I'm h1 tag"), // these are the array of children and we can have n number of children btw the tag
-    e("h2", null, "I'm h2 tag")
-  )
+// const nested = e(
+//   "div",
+//   { id: "parent" },
+//   e(
+//     "div",
+//     { id: "child" },
+//     e("h1", null, "I'm h1 tag"), // these are the array of children and we can have n number of children btw the tag
+//     e("h2", null, "I'm h2 tag")
+//   )
+// );
+
+// React Element
+const heading = React.createElement(
+  "h1",
+  {},
+  "Namste React with react element"
+);
+
+// jsx Element
+const jsxHeading = <h1>Namaste React with JSX element.</h1>;
+
+// React Component
+const HeadingComponent = () => (
+  <div id="parent">
+    <h2 id="heading">
+      Namaste React from React Functional Component with JSX.
+    </h2>
+  </div>
+);
+
+// this is component composition (composing multiple component into a single component)
+const ComponentCompostion = () => (
+  <div id="container">
+    <HeadingComponent />
+    <p id="paragraph">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+      dolorum consequuntur, quam ratione veritatis consequatur adipisci sapiente
+      minus recusandae tenetur, mollitia veniam id tempora aperiam pariatur
+      maxime nihil officiis?
+    </p>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-
-root.render(nested);
+root.render(<ComponentCompostion />); // <HeadingComponnet/> is treated as jsx element
 
 // render it will take the react element i,e the js object create the tag and put in the root elment;
 // that we created using reactdom.createroot
