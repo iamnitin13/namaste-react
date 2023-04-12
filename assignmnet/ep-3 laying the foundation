@@ -21,3 +21,22 @@ root.render on transpile treated Functional or Class component as jsx elemnet th
 It accept `one root container` or one root elment wrap other component inside the root ; like we did when creating nested element
 root container :- `<></>` or `<React.Fragement></React.Fragement>`
 these two will not create an extra element inside the DOM.
+
+`{}` is used to evalutae any js expressionn; it can be used inside the jsx; mostly it used for any dynamic value or any expression or some conditional based rendering.
+
+jsx prevet the cross-site scripting attack(XSS attack - attacker injects malicious code into a web page) by sanitizing ; so any expression inside the {} is automatically escape. (code will not executed as HTML;it will be plain text i.e `<script>{some scripting code}</script>`)
+
+at the end of day::::
+react---js,
+functionComponent---function,
+jsx---react.createElement,
+react.createElement---js object
+
+jsx expression must have only one parent element.
+
+React Fragement:- wrap multiple parent inside the fragement; it will create the extra element and it will be one root parent.It behave like an empty tag
+
+Fragment & <>: Fragment can be used where we don't want the extra element but on mapping something we can provide the key with unqiue value so that reactdom will have this info and later only render the updated element inside this map.
+
+we can have multiple root and that can we render
+but when only single root and multiple render on the same root the render method will be replace by the last render method & will only have render whatever component or jsx or reactelment we have passe to it on the browser.
