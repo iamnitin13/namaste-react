@@ -2,6 +2,7 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client"; //earlier it was from react-dom
 import Main from "./Main";
+import AppLayout from "./AppLayout";
 
 /**
  *
@@ -97,3 +98,6 @@ root.render(<HeadingComponent />);
 
 // coding assignment practice use this to render the main.jsx that conatin future comp. and other things...
 root.render(<Main />);
+
+// practing application food application
+root.render(<AppLayout />);
