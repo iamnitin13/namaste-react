@@ -1,4 +1,5 @@
-script in package.json is a reserved keyword used to run the command specficed with key and value. i.e `'start:parcel index.html`; we can directly run this cmd with the use of script; `npm run start` or `npm start`.Behind will run the cmd the we passed to this key `start`, run is used for custom keys.
+script in package.json is a reserved keyword used to run the command specficed with key and value. i.e `'start:parcel index.html`; we can directly run this cmd with the use of script; `npm run start` or `npm start`.Behind will run the cmd that we passed to this key `start`, run is used for custom keys.
+It is useful in case for having long cmd and running these cmd multiple time will not ease for devloper, so script help to tag those cmd with some custom keys, so when run `npm run <custom_key>` npm will look in the package json inside script,if found run else throw error.
 
 React.creatElement ===> Object ====> HTMl Element (when render to DOM).
 
@@ -8,7 +9,7 @@ JSX==> `javascript xml` js syntax to create react element which is easier; not p
 
 BABEL#(JSX) ===> React.creatElement ===> Object ====> HTMl Element (when render to DOM).
 
-Babel😈 is transform toolchainl it convert jsx elment to react.element, it also provide backward compatibli for es6 feature by converting to code that old & current browser understand. It at the end is the js code that take some code transpile it to another one.
+Babel😈 is transform toolchainl it convert jsx elment to react.element, it also provide backward compatible for es6 feature by converting to code that old & current browser understand. It at the end is the js code that take some code transpile it to another one.
 
 jsx element vs html diff; className not class; attribute will have camelCase not kebab-case.
 
@@ -40,3 +41,9 @@ Fragment & <>: Fragment can be used where we don't want the extra element but on
 
 we can have multiple root and that can we render
 but when only single root and multiple render on the same root the render method will be replace by the last render method & will only have render whatever component or jsx or reactelment we have passe to it on the browser.
+
+Reconcilation is the process in which react compare the newly (next) tree with the old tree and based on comparsion it calculate the minimal change that need to update in actual dom. it save cost of updating actual dom when state or props change, it is perfomanat efficeint.
+
+React createlement return js object that contain the description of what need to render, as react is a declartive, we just need to tell react what we want & react will do for us.
+
+diffing algorith & batching mechanism (optimise the performance of updates). react not immedidiately start the reconcilation process. it batches updated together and perform them all at once.

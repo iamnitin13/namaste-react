@@ -1,6 +1,7 @@
 // importing the module or package the we have install (react and react-dom);
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client"; //earlier it was from react-dom
+import Main from "./Main";
 
 /**
  *
@@ -93,3 +94,6 @@ root.render(<HeadingComponent />);
 
 // const secondRoot = ReactDOM.createRoot(document.getElementById("root-2"));
 // secondRoot.render(<HeadingComponent />);
+
+// coding assignment practice use this to render the main.jsx that conatin future comp. and other things...
+root.render(<Main />);
