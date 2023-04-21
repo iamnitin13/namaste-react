@@ -1,0 +1,72 @@
+.res-card {
+  margin: 1rem auto;
+  padding: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  cursor: pointer;
+  height: fit-content;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px #b9a3a3;
+    border-radius: 8px;
+  }
+
+  .res-logo {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .about {
+    padding-block: 0.5rem;
+    .res-name,
+    .res-cusinie,
+    .res-food-type {
+      padding-bottom: 0.2rem;
+      font-size: 14px;
+    }
+
+    .res-cusinie {
+      padding-inline-end: 1rem;
+    }
+
+    .res-food-type {
+      position: absolute;
+      right: 30px;
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      &[role="veg"] {
+        background: green;
+      }
+      &[role="non-veg"] {
+        background: #5d0909d4;
+      }
+    }
+  }
+
+  .res-info > ul {
+    list-style: none;
+    padding-block: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  hr {
+    margin-block: 0.5rem;
+  }
+  address {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    font-weight: 300;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 0.2rem;
+      margin-left: -0.5rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+1. Why use react: as all the things can be doable with html,css,js and react also usage react in the end. library/ framework provide a boiler plate for us as developers; so instead of developing any features from scratch;we can use the library that have the code; so it reduce the developer experience and save time;focusing on the business part of the application. it also help in performance,optimization and building our code,so that our application load fast and less in bytes. Hooks were introduced for functional components only to manage state and lifycycle as class components already have setState method and different lifycycle methods. Functional components are resuable,peformance efficient and optimized then class components.
+
+   REASON::::::: simpler, more reusable, and more performant UI components. Functional components, along with hooks, have also helped to make it easier to manage stateful logic and improve code readability and maintainability.
+
+2. Folder structure depends on the yourself, but their are ways to define: routes based , file types based....(TOBE CONTINUE)
+
+3. Component file name must start with the function name;if it is uppercase create with uppercase filename...& vice versa.
+
+4. By default mean the file or module can export one things; if multiple things need to be exported use named export.
+
+5. default export can be imported with any name as it will single exported from that module, whereas named export is imported inside {} with the named we have export it or if we want to change the name; use alias to use different name for it.

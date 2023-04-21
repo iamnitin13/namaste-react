@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Header from "./src/components/Header/Header";
+import Header from "./HeaderComponent/Header";
 
 /**
  *

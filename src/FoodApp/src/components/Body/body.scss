@@ -1,0 +1,35 @@
+.body {
+  padding: 5rem;
+
+  .res-search {
+    padding-block: 2.5rem;
+    width: 40vmax;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    input {
+      width: 100%;
+      height: 3rem;
+      border-radius: 8px;
+      padding-inline: 1rem;
+      border: 1px solid #d0c9c9;
+    }
+    .submit {
+      cursor: pointer;
+      margin-left: 1rem;
+      padding: 0 0.5rem;
+      position: relative;
+      right: 82px;
+      border: none;
+      background: #fff;
+      color: #c5c0c0c8;
+      font-weight: 600;
+    }
+  }
+
+  .res-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}

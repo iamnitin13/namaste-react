@@ -1,8 +1,8 @@
 // importing the module or package the we have install (react and react-dom);
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client"; //earlier it was from react-dom
-import Main from "./Main";
-import AppLayout from "./AppLayout";
+import Main from "./src/Tasks/HeaderTask/Main";
+import AppLayout from "./src/FoodApp/src/AppLayout";
 
 /**
  *
