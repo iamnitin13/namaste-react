@@ -1,0 +1,1729 @@
+{
+  "title": "SEE ALL",
+  "totalOpenRestaurants": 13,
+  "cards": [
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "380216",
+        "name": "Ram Mishthan Bhandar",
+        "uuid": "f4e3d9f2-39e3-4358-a6fd-114a5dfbff86",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "100+ ratings",
+        "cloudinaryImageId": "xso8rlchtsdwtzy5q1ju",
+        "cuisines": ["Sweets", "Snacks"],
+        "tags": [],
+        "costForTwo": 15000,
+        "costForTwoString": "₹150 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.5,
+        "slugs": {
+          "restaurant": "ram-mishthan-bhandar-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NEAR POLICE CHOWKI CHOWK ROAD BALRAMPUR, Balrampur Tahsil, Balrampur , Uttar Pradesh-271201",
+        "locality": "Chowk Road",
+        "parentId": 21906,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "ribbon": [
+          {
+            "type": "PROMOTED"
+          }
+        ],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "cid=6430064~p=1~eid=00000187-a282-498d-0080-db4e00c70131",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.5 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "380216",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.5,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": true,
+        "avgRating": "4.3",
+        "totalRatings": 100,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "377757",
+        "name": "New Pizza khalo ",
+        "uuid": "82f1ce88-b130-410d-848a-6fcf998ef089",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "asu78wph0wrt2io1dz30",
+        "cuisines": ["Chinese"],
+        "tags": [],
+        "costForTwo": 15000,
+        "costForTwoString": "₹150 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.5,
+        "slugs": {
+          "restaurant": "pizza-khalo-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "CITY POLICE ROAD MEMORIAL HOSPITAL BALRAMPUR ASPATAL VARD PURAINIYA",
+        "locality": "City Police Road",
+        "parentId": 335191,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "60% off",
+          "shortDescriptionList": [
+            {
+              "meta": "60% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "60% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.5 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "377757",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.5,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.2",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "172263",
+        "name": "Satyam Restaurant",
+        "uuid": "42711981-21a6-4506-adbe-69b607dead69",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "xpeaa5zcuxy8vt36iu4l",
+        "cuisines": ["North Indian", "South Indian"],
+        "tags": [],
+        "costForTwo": 22000,
+        "costForTwoString": "₹220 FOR TWO",
+        "deliveryTime": 28,
+        "minDeliveryTime": 28,
+        "maxDeliveryTime": 28,
+        "slaString": "28 MINS",
+        "lastMileTravel": 0.20000000298023224,
+        "slugs": {
+          "restaurant": "satyam-restaurant-nagar-palika-road-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NAGAR PALIKA ROAD BALRAMPUR 271201",
+        "locality": "Nagar Palika Road",
+        "parentId": 178966,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.2 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "172263",
+          "deliveryTime": 28,
+          "minDeliveryTime": 28,
+          "maxDeliveryTime": 28,
+          "lastMileTravel": 0.20000000298023224,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.7",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "322135",
+        "name": "The Trend Restaurant",
+        "uuid": "1c3f8220-68b0-4efb-8cb8-ba1e7ee89795",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "100+ ratings",
+        "cloudinaryImageId": "mpcdaycwh9ungq8wsp0l",
+        "cuisines": ["Chinese", "North Indian", "Fast Food"],
+        "tags": [],
+        "costForTwo": 25000,
+        "costForTwoString": "₹250 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.30000001192092896,
+        "slugs": {
+          "restaurant": "the-trend-restaurant-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NAGAR PALIKA ROAD AWADH HOTEL PURNIYA TALAN BALRAMPUR",
+        "locality": "Nagar Palika Road",
+        "parentId": 214881,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "60% off",
+          "shortDescriptionList": [
+            {
+              "meta": "60% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "60% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.3 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "322135",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.30000001192092896,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "2.8",
+        "totalRatings": 100,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "172248",
+        "name": "Family Dhaba",
+        "uuid": "5496bf74-4aaf-4942-ae27-693cfaa80d69",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "cuvlnftrue7uuibmufqs",
+        "cuisines": ["North Indian", "Chinese", "Arabian"],
+        "tags": [],
+        "costForTwo": 20000,
+        "costForTwoString": "₹200 FOR TWO",
+        "deliveryTime": 21,
+        "minDeliveryTime": 21,
+        "maxDeliveryTime": 21,
+        "slaString": "21 MINS",
+        "lastMileTravel": 1.899999976158142,
+        "slugs": {
+          "restaurant": "family-dhaba-tulsipur-road-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NEAR MEWALAL POLICE CHOWKI CHUNGI NAKA TULSIPUR BALRAMPUR 271201",
+        "locality": "Tulsipur Road",
+        "parentId": 78341,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "10% off",
+          "shortDescriptionList": [
+            {
+              "meta": "10% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "10% off up to ₹40 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "10% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "10% off up to ₹40 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "1.8 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "172248",
+          "deliveryTime": 21,
+          "minDeliveryTime": 21,
+          "maxDeliveryTime": 21,
+          "lastMileTravel": 1.899999976158142,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.6",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "457759",
+        "name": "Madrasi Dosa Corner",
+        "uuid": "731cda1a-a06a-4501-8b67-723d94eb9369",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "20+ ratings",
+        "cloudinaryImageId": "prdumklmmvnassx6xfvj",
+        "cuisines": ["South Indian", "Snacks"],
+        "tags": [],
+        "costForTwo": 15000,
+        "costForTwoString": "₹150 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.6000000238418579,
+        "slugs": {
+          "restaurant": "madrasi-dosa-corner-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "near pipal tiraha bahraich road balrampur pahalvara nagar palika uttar pradesh",
+        "locality": "Bahraich Road",
+        "parentId": 15240,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "40% off",
+          "shortDescriptionList": [
+            {
+              "meta": "40% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "40% off up to ₹80 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "40% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "40% off up to ₹80 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.6 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "457759",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.6000000238418579,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.6",
+        "totalRatings": 20,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "681080",
+        "name": "Royal Bites Family Restaurant",
+        "uuid": "9c04f742-1cde-4bd5-8b73-825081ac774b",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "Too Few Ratings",
+        "cloudinaryImageId": "4e0943302956ff2f3b9e423546c90da0",
+        "cuisines": ["Chinese", "Kebabs", "Biryani"],
+        "tags": [],
+        "costForTwo": 40000,
+        "costForTwoString": "₹400 FOR TWO",
+        "deliveryTime": 20,
+        "minDeliveryTime": 20,
+        "maxDeliveryTime": 20,
+        "slaString": "20 MINS",
+        "lastMileTravel": 0.800000011920929,
+        "slugs": {
+          "restaurant": "royal-bites-family-restaurant-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "Tulsipur Road, opposite D.A.V. Inter Collage, Nai Basti, Balrampur, Uttar Pradesh 271201, India",
+        "locality": "Tulsipur Road",
+        "parentId": 406888,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.8 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "681080",
+          "deliveryTime": 20,
+          "minDeliveryTime": 20,
+          "maxDeliveryTime": 20,
+          "lastMileTravel": 0.800000011920929,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "--",
+        "totalRatings": 0,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "669036",
+        "name": "Chai Calling",
+        "uuid": "58e975db-2940-4005-87a7-5d397d022797",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "Too Few Ratings",
+        "cloudinaryImageId": "1e756ee8d230b65d570f7e8e70f7062c",
+        "cuisines": ["Beverages", "Fast Food", "Snacks"],
+        "tags": [],
+        "costForTwo": 20000,
+        "costForTwoString": "₹200 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.800000011920929,
+        "slugs": {
+          "restaurant": "chai-calling-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "SIDDHI TRADERS NEAR KALI MAI THAN  TULSIPUR ROAD, nai bazar north, nagar  palika balrampur",
+        "locality": "Tulsipur Road",
+        "parentId": 56930,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.8 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "669036",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.800000011920929,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "--",
+        "totalRatings": 0,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "174142",
+        "name": "Jai Palace - Zayka Resaturant",
+        "uuid": "d76ab928-5fef-4fbf-9b77-322251dca843",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "o9fzppz4ywxjfldeiukg",
+        "cuisines": ["North Indian"],
+        "tags": [],
+        "costForTwo": 25000,
+        "costForTwoString": "₹250 FOR TWO",
+        "deliveryTime": 21,
+        "minDeliveryTime": 21,
+        "maxDeliveryTime": 21,
+        "slaString": "21 MINS",
+        "lastMileTravel": 1.5,
+        "slugs": {
+          "restaurant": "jai-palace-zayka-resaturant-civil-lines-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NEAR OLD RTO OFFICE NEEL KOTHI CIVIL LINES BALRAMPUR 271201",
+        "locality": "Neelbagh Palace Road",
+        "parentId": 108664,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "20% off",
+          "shortDescriptionList": [
+            {
+              "meta": "20% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "20% off up to ₹50 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "20% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "20% off up to ₹50 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "1.5 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "174142",
+          "deliveryTime": 21,
+          "minDeliveryTime": 21,
+          "maxDeliveryTime": 21,
+          "lastMileTravel": 1.5,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.4",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "201714",
+        "name": "Apni Rasoi",
+        "uuid": "040a7588-3744-4716-b99d-1c26c58e0391",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "500+ ratings",
+        "cloudinaryImageId": "j8nlcrdpikbzszkxajov",
+        "cuisines": ["Chinese", "Indian", "South Indian"],
+        "tags": [],
+        "costForTwo": 20000,
+        "costForTwoString": "₹200 FOR TWO",
+        "deliveryTime": 37,
+        "minDeliveryTime": 37,
+        "maxDeliveryTime": 37,
+        "slaString": "37 MINS",
+        "lastMileTravel": 1.7999999523162842,
+        "slugs": {
+          "restaurant": "apni-rasoi-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "MAYA HOTEL KE PICHE DHUSAH BALRAMPUR",
+        "locality": "Dhusah",
+        "parentId": 64,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "20% off",
+          "shortDescriptionList": [
+            {
+              "meta": "20% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "20% off up to ₹50 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "20% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "20% off up to ₹50 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "1.7 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "201714",
+          "deliveryTime": 37,
+          "minDeliveryTime": 37,
+          "maxDeliveryTime": 37,
+          "lastMileTravel": 1.7999999523162842,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.8",
+        "totalRatings": 500,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "172258",
+        "name": "Annapurna Restaurent - Hotel Aaditya Inn",
+        "uuid": "d85cdff3-0a73-4840-aa5d-797b0c71252b",
+        "city": "10359",
+        "area": "Balrampur",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "u032gjyvodaqfqwwl9o3",
+        "cuisines": ["Chinese", "North Indian"],
+        "tags": [],
+        "costForTwo": 30000,
+        "costForTwoString": "₹300 FOR TWO",
+        "deliveryTime": 32,
+        "minDeliveryTime": 32,
+        "maxDeliveryTime": 32,
+        "slaString": "32 MINS",
+        "lastMileTravel": 3,
+        "slugs": {
+          "restaurant": "annapurna-restaurent-dharampur-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "UTRAULA ROAD DHARAMPUR BALRAMPUR 271201",
+        "locality": "Dharampur",
+        "parentId": 34132,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "3 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "172258",
+          "deliveryTime": 32,
+          "minDeliveryTime": 32,
+          "maxDeliveryTime": 32,
+          "lastMileTravel": 3,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.9",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "691399",
+        "name": "Agarwal's Foods Darbaar",
+        "uuid": "8e774439-c3b2-48da-9e05-da754f4097f1",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "Too Few Ratings",
+        "cloudinaryImageId": "1e2fe13ed88164b0d2620fb81e32702e",
+        "cuisines": [
+          "Chinese",
+          "Snacks",
+          "Pizzas",
+          "Fast Food",
+          "South Indian"
+        ],
+        "tags": [],
+        "costForTwo": 15000,
+        "costForTwoString": "₹150 FOR TWO",
+        "deliveryTime": 37,
+        "minDeliveryTime": 37,
+        "maxDeliveryTime": 37,
+        "slaString": "37 MINS",
+        "lastMileTravel": 3.700000047683716,
+        "slugs": {
+          "restaurant": "agarwal's-foods-darbaar-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "64 ,Agarwal's foods darbaar Utraula gonda bypass road, Balrampur , 271201",
+        "locality": "Bypass Road",
+        "parentId": 414325,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "3.7 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "691399",
+          "deliveryTime": 37,
+          "minDeliveryTime": 37,
+          "maxDeliveryTime": 37,
+          "lastMileTravel": 3.700000047683716,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "--",
+        "totalRatings": 0,
+        "new": true
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "357122",
+        "name": "Lavya International-Hotel and Restaurant",
+        "uuid": "06fd0589-2030-474b-a5f4-1ecb1aabfddf",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "50+ ratings",
+        "cloudinaryImageId": "dcc72cl6e0gfoidcizsm",
+        "cuisines": [
+          "North Indian",
+          "Chinese",
+          "South Indian",
+          "Tandoor",
+          "Salads"
+        ],
+        "tags": [],
+        "costForTwo": 25000,
+        "costForTwoString": "₹250 FOR TWO",
+        "deliveryTime": 46,
+        "minDeliveryTime": 46,
+        "maxDeliveryTime": 46,
+        "slaString": "46 MINS",
+        "lastMileTravel": 4.900000095367432,
+        "slugs": {
+          "restaurant": "lavya-international-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "BHAGWATIGANJ VILL VISHNUPUR INFRONT OF BALRAMPUR CHINI MILL BALRAMPUR",
+        "locality": "Bhagwatiganj",
+        "parentId": 123834,
+        "unserviceable": false,
+        "veg": true,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 1400,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 1400,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "1400",
+          "icon": ""
+        },
+        "availability": {
+          "opened": true,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "4.9 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "357122",
+          "deliveryTime": 46,
+          "minDeliveryTime": 46,
+          "maxDeliveryTime": 46,
+          "lastMileTravel": 4.900000095367432,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.0",
+        "totalRatings": 50,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "333531",
+        "name": "SHREE KITCHEN",
+        "uuid": "8e919c9f-f7ab-4ea8-9860-f82008e3ee21",
+        "city": "10359",
+        "area": "Veer vinay chauraha",
+        "totalRatingsString": "100+ ratings",
+        "cloudinaryImageId": "b4ephtqy4nb6pwpbth2x",
+        "cuisines": ["North Indian"],
+        "tags": [],
+        "costForTwo": 25000,
+        "costForTwoString": "₹250 FOR TWO",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "slaString": "19 MINS",
+        "lastMileTravel": 0.4000000059604645,
+        "slugs": {
+          "restaurant": "shree-kitchen-veer-vinay-chauraha-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "NAI BASTI P/S KOTWALINNAGAR BALRAMPUR",
+        "locality": "Kotwali Nagar",
+        "parentId": 184898,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": false,
+          "nextOpenMessage": "",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "0.4 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "333531",
+          "deliveryTime": 19,
+          "minDeliveryTime": 19,
+          "maxDeliveryTime": 19,
+          "lastMileTravel": 0.4000000059604645,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "2.7",
+        "totalRatings": 100,
+        "new": false
+      },
+      "subtype": "basic"
+    },
+    {
+      "type": "restaurant",
+      "data": {
+        "type": "F",
+        "id": "172249",
+        "name": "Foodies Love",
+        "uuid": "20d2f805-7275-44fb-b334-76e530d1eb3a",
+        "city": "10359",
+        "area": "Payagpur",
+        "totalRatingsString": "1000+ ratings",
+        "cloudinaryImageId": "dmk8jnlbrcd5nbmghy7r",
+        "cuisines": ["Chinese", "North Indian"],
+        "tags": [],
+        "costForTwo": 15000,
+        "costForTwoString": "₹150 FOR TWO",
+        "deliveryTime": 40,
+        "minDeliveryTime": 40,
+        "maxDeliveryTime": 40,
+        "slaString": "40 MINS",
+        "lastMileTravel": 3.5,
+        "slugs": {
+          "restaurant": "foodies-love-sekhuyikalan-veer-vinay-chauraha",
+          "city": "balrampur"
+        },
+        "cityState": "10359",
+        "address": "87 A SEKHUYIKALAN BAHRAICH ROAD BALRAMPUR 271201",
+        "locality": "Sekhuyikalan",
+        "parentId": 82626,
+        "unserviceable": false,
+        "veg": false,
+        "select": false,
+        "favorite": false,
+        "tradeCampaignHeaders": [],
+        "aggregatedDiscountInfo": {
+          "header": "60% off",
+          "shortDescriptionList": [
+            {
+              "meta": "60% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "aggregatedDiscountInfoV2": {
+          "header": "60% OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "60% off up to ₹120 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "subHeader": "",
+          "headerType": 0,
+          "superFreedel": ""
+        },
+        "chain": [],
+        "feeDetails": {
+          "fees": [
+            {
+              "name": "distance",
+              "fee": 500,
+              "message": ""
+            },
+            {
+              "name": "time",
+              "fee": 0,
+              "message": ""
+            },
+            {
+              "name": "special",
+              "fee": 0,
+              "message": ""
+            }
+          ],
+          "totalFees": 500,
+          "message": "",
+          "title": "Delivery Charge",
+          "amount": "500",
+          "icon": ""
+        },
+        "availability": {
+          "opened": false,
+          "nextOpenMessage": "Opens next at 12 noon, today",
+          "nextCloseMessage": ""
+        },
+        "longDistanceEnabled": 0,
+        "rainMode": "NONE",
+        "thirdPartyAddress": false,
+        "thirdPartyVendor": "",
+        "adTrackingID": "",
+        "badges": {
+          "imageBased": [],
+          "textBased": [],
+          "textExtendedBadges": []
+        },
+        "lastMileTravelString": "3.5 kms",
+        "hasSurge": false,
+        "sla": {
+          "restaurantId": "172249",
+          "deliveryTime": 40,
+          "minDeliveryTime": 40,
+          "maxDeliveryTime": 40,
+          "lastMileTravel": 3.5,
+          "lastMileDistance": 0,
+          "serviceability": "SERVICEABLE",
+          "rainMode": "NONE",
+          "longDistance": "NOT_LONG_DISTANCE",
+          "preferentialService": false,
+          "iconType": "EMPTY"
+        },
+        "promoted": false,
+        "avgRating": "3.1",
+        "totalRatings": 1000,
+        "new": false
+      },
+      "subtype": "basic"
+    }
+  ],
+  "totalRestaurants": 30
+}

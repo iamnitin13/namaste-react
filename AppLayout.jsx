@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import resturants from "./src/json/resturants.json";
 
 /**
  *
@@ -47,30 +48,52 @@ const Header = () => {
   );
 };
 
-const ResturantCard = () => {
+const ResturantCard = ({ card }) => {
+  const {
+    name,
+    cuisines,
+    cloudinaryImageId,
+    avgRating,
+    slaString,
+    costForTwoString,
+    veg,
+    address,
+  } = card;
+
   return (
     <div className="res-card">
       <img
         className="res-logo"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwDtxDkEN0Em1kNIX6UJsWZ2GkQp5cebup4d44PBrYnzsQOnIPMBfJ4oOIFJRl_qjxOj0&usqp=CAU"
-        alt="resturant logo"
+        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
+        alt={name}
       />
       <div className="about">
-        <h3 className="res-name">Billu Da Dabha</h3>
-        <i className="res-cusinie">Veg Food, North Indian, Chiniese</i>
+        <h3 className="res-name">{name}</h3>
+        <i className="res-cusinie">{cuisines.join()}</i>
+        <span className="res-food-type" role={veg ? "veg" : "non-veg"} />
       </div>
+      <hr />
       <div className="res-info">
         <ul>
-          <li>Rating : *****</li>
-          <li>Delivery: 25mins</li>
-          <li>Price: $30</li>
+          <li>{!isNaN(avgRating) ? `${avgRating} stars` : avgRating}</li>
+          <li>{slaString}</li>
+          <li>{costForTwoString}</li>
         </ul>
+        <hr />
+        <address>
+          <img
+            src="https://img.freepik.com/premium-vector/location-point-icon-vector-illustration_9999-17225.jpg?w=2000"
+            alt="location-logo"
+          />
+          <span>{address}</span>
+        </address>
       </div>
     </div>
   );
 };
 
 const Body = () => {
+  const btnRef = useRef();
   return (
     <div className="body">
       <div className="res-search">
@@ -78,15 +101,20 @@ const Body = () => {
           type="search"
           name="resturant"
           placeholder="Type Resturant Name..."
+          onChange={(e) =>
+            e.target.value.length
+              ? (btnRef.current.style.display = "#e36313cc")
+              : (btnRef.current.style.color = "#c5c0c0c8")
+          }
         />
-        <button className="submit" type="submit">
+        <button className="submit" type="submit" ref={btnRef}>
           Search
         </button>
       </div>
       <div className="res-container">
         {/* resturant card separate component as it resuable */}
-        {[...Array(10)].map((_, index) => {
-          return <ResturantCard key={index} />;
+        {resturants.cards.map(({ data: card }) => {
+          return <ResturantCard card={card} key={card.id} />;
         })}
       </div>
     </div>

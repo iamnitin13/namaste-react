@@ -1,1 +1,41 @@
-1. create component whenever we have to reuse it.
+1.  create component whenever we have to reuse it.
+2.  passing a props to a component is like passing a argument to a function; as components are nothing but a normal js function.
+    passing props is same way like we do define attributes to an element similarly props can be passed they may be built-in attributes as well as custom attributes.(properties)
+    it will be wrapped inside an object to the component; i.e the function at the end--- so the parameter cann we defined in two ways :
+    either use props keyword (short of convention to use.)
+    destruct the props object and use the defined properties inside the component
+
+        NOTE: Props is an object. When passing a dynamic data to a component pass it via `props`
+
+        `Config driven UI`: website driven by data; it have config; let take example of swiggy crousel : it will be different of cities; that what config driven UI.It's an approach to building UI components that uses configuration data to dynamically generate the content and behavior of the component.
+
+             Advanage: flexibility, scalability, reusability, and consistency in UI design.
+             Disadvantages: steep learning curve, difficulty in debugging configuration data, potential impact on performance, and added complexity to the codebase.
+        controlling our ui based on the configuration (data) from the backend.
+
+3.  React use the concept of mixing up markup and js in the same file.
+
+4.  whenever looping or mapping on any thing pass key; it will uniquley identify that child element;
+    key is reserved keywords;we cannot pass key as props to the child component as it is not part of props object; might be confusing as it also set
+    same like other props we passed.
+
+            WHY TO PASS KEY PROP:::::
+                react will treat all the child elements as new if key is not passed; as it will not identify which child element has been changed/added/removed. it will clean all the child node and render all the child node again, that will cause the performance issue, when it came to dom manuplation as render the entire child dom node will take time to be reflect in the ui.
+                SO to optimise the performance react use key that must be unique to help him identifying which child comp; has been updated and only update that part in the actual dom ; not render the entire child dom node.
+                key must be passed to map() function return component; not inside the component element itself.
+                # Keys should be "stable, predictable, and unique."
+                key prop should always be passed to the element that is being rendered in the map() function and is unique among the siblings,
+
+5.  The `virtual DOM (VDOM)` is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+
+6.  Declartive approach: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state.
+
+7.  React, however, also uses internal objects called `“fibers”` to hold additional information about the component tree. They may also be considered a part of “virtual DOM” implementation in React. Fiber is the new reconciliation engine in React 16. Its main goal is to enable `incremental rendering` of the virtual DOM.
+
+8.  Incremental Rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+9.  The `reconciler` does the work of `computing which parts of a tree have changed`; the `renderer` then uses that information to actually `update the rendered app`.
+
+10. render() function as creating a tree of React elements.state or props update, that render() function will return a different tree of React elements. react then needs to figure out how to efficiently update the UI to match the most recent tree.
+
+11. can we create component without class: This means writing ES6 classes comes with a little more boilerplate code for event handlers, but the upside is slightly better performance in large applications. we can with use of `create-react-class` library provided by react and create an object inside the return method from the imported package, es6 classes have the advantage of the boiler-plate code that required in imported package. createReactClass have binding to `this` itself.
