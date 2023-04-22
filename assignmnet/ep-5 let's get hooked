@@ -1,11 +1,25 @@
-1. Why use react: as all the things can be doable with html,css,js and react also usage react in the end. library/ framework provide a boiler plate for us as developers; so instead of developing any features from scratch;we can use the library that have the code; so it reduce the developer experience and save time;focusing on the business part of the application. it also help in performance,optimization and building our code,so that our application load fast and less in bytes. Hooks were introduced for functional components only to manage state and lifycycle as class components already have setState method and different lifycycle methods. Functional components are resuable,peformance efficient and optimized then class components.
+1.  Why use react: as all the things can be doable with html,css,js and react also usage react in the end. library/ framework provide a boiler plate for us as developers; so instead of developing any features from scratch;we can use the library that have the code; so it reduce the developer experience and save time;focusing on the business part of the application. it also help in performance,optimization and building our code,so that our application load fast and less in bytes. Hooks were introduced for functional components only to manage state and lifycycle as class components already have setState method and different lifycycle methods. Functional components are resuable,peformance efficient and optimized then class components.
 
-   REASON::::::: simpler, more reusable, and more performant UI components. Functional components, along with hooks, have also helped to make it easier to manage stateful logic and improve code readability and maintainability.
+    REASON::::::: simpler, more reusable, and more performant UI components. Functional components, along with hooks, have also helped to make it easier to manage stateful logic and improve code readability and maintainability.
 
-2. Folder structure depends on the yourself, but their are ways to define: routes based , file types based....(TOBE CONTINUE)
+2.  Folder structure depends on the yourself, but their are ways to define: routes based , file types based....(TOBE CONTINUE)
 
-3. Component file name must start with the function name;if it is uppercase create with uppercase filename...& vice versa.
+3.  Component file name must start with the function name;if it is uppercase create with uppercase filename...& vice versa.
 
-4. By default mean the file or module can export one things; if multiple things need to be exported use named export.
+4.  By default mean the file or module can export one things; if multiple things need to be exported use named export.
 
-5. default export can be imported with any name as it will single exported from that module, whereas named export is imported inside {} with the named we have export it or if we want to change the name; use alias to use different name for it.
+5.  default export is to use to export one thing which can be imported with any name as it will single exported from that module, whereas named export is use to export multiple things in this case default in not use as it show error `module cannot have multiple default export`, & this type of named export is imported inside {} with the named we have export it or if we want to change the name; use alias to use different name for it.
+    default export/import :::: export default <Component> ----- import <Component> from 'path/to/';
+    named export/import :::: export const <Component1>, export const <Component21>,.. multiple. ---- import {<Component1>,<Component2>} from 'path/to'; another way to export named const; export {<Componennt1>,<Component2>}.
+
+6.  Never keep hard coded data in the components file; separete in some utils or constant File.
+
+7.  If we update the variables inside our jsx; the UI will not got updated with the latest changes; so how we do that;
+    React provides a very useful feature known as `Hooks`. it was introduced in react 16.8v; it help you to use stateful component without use class based component & also other feature. when functional component was introduced there was no way of updating the dom when the state of component changed; that why hooks where intoduced for functional component only not for class based component( as they already have features).
+
+          `Hooks are noraml javascript function.`This function have some super powered (have some utilities). wriiten inside react. so when we install react we import all the utilities from react.
+               Two most super useful hooks:
+                  1. useState - superPowerFul state variable in react.
+                  2. useEffect -
+
+8.  if data changes ui should be changes (these problems solved by library/framework)
