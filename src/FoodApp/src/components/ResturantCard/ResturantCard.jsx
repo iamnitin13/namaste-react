@@ -1,4 +1,4 @@
-import { LOCATION_URL, RESTURANT_IMG_URL } from "../../utils/contants";
+import { LOCATION_URL, RESTURANT_IMG_URL } from "../../utils/constants";
 import "./resturantCard.scss";
 
 const ResturantCard = ({ card }) => {
