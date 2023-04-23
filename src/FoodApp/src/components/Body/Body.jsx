@@ -6,6 +6,8 @@ import "./body.scss";
 const Body = () => {
   const btnRef = useRef();
   const inputRef = useRef();
+
+  //local state variables, whose scope is within the component.
   const [resturants, setResturants] = useState([...resturantList.cards]);
 
   return (

@@ -23,3 +23,21 @@
                   2. useEffect -
 
 8.  if data changes ui should be changes (these problems solved by library/framework)
+
+9.  local varriables: let resturants=[]; will be similar to react state variables i.e const [resturants] = useState([]); it similar how we assigned value to this variables(default value).
+10. useState hooks return an array of default state variables and a function to modify the state variables; we can name this function anything; but the standard is use `set` prefix with state varibles name i,e.(res,setRes).
+
+            why this state variable is supper powered; it sync the ui and data layer (it update the ui whenever statae variable changes).
+            `Whenever the state variable update,react re-render the component.`
+            `As soon as data layer update the ui layer will be updated, by re-rendering the component`.
+            React will the DOM operations superfast and effecient.
+
+11. Virtual DOM: is the representation of actual DOM, it is hold the js object.
+12. Reconcilation : is the proccess of the updating the dom.
+13. React Fiber : is the new way of finding the diff and updating the dom.
+14. Diff algorithm: find out the difference btw the updated virtual DOM with previous virtual DOM. then it compute & update the actual dom
+
+15. finding out the difference btw the html element is difficalut than to find it with js object. (and virtual dom is a js object.)
+
+        see virtual dom is the js representation the acutal dom(in the form of object) ,only represent --- ex. react use jsx----that jsx turned into react.createElement---that will return an js obj--- that is the vir.DOM, the diff algorithm comparing the changes with updated dom to the previuos dom. and then update the actual dom. let go into more deep.. see whene the state variable (that superpowerd one remember?) is changed/updated, (react is watching your state variables) what it will do , it will re-render the component, and the new virtual dom is created, then the diff algorithm compares the previous virtual dom with the updated virtual dom & that process is known as reconcilation or react-fiber. after the comparsion , react-dom computes the changes that need to be done and it then update the actual dom, with the computed changes.
+            that how our react is fast: in term of rendering/updating component.
