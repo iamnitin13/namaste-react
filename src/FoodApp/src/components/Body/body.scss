@@ -4,55 +4,65 @@
   .res-selections-container {
     padding-block: 2rem 0.5rem;
     margin-inline: 2rem;
-    width: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     position: relative;
     .res-search {
-      flex-basis: 40%;
+      width: 100%;
       position: relative;
 
       input {
-        width: 100%;
+        width: inherit;
         height: 3rem;
         border-radius: 8px;
-        padding-inline: 1rem;
+        padding-inline: 2rem;
         border: 1px solid #d0c9c9;
         letter-spacing: 1px;
         font-size: 1rem;
       }
-      .submit {
+      .cancel-btn {
         cursor: pointer;
-        color: #c5c0c0c8;
-        background: #fff;
-        border: none;
-        padding-inline: 0.5rem;
-        font-size: 1rem;
         position: absolute;
-        right: 5px;
-        top: 33%;
+        background: #fff;
+      }
+
+      .cancel-btn {
+        color: red;
+        width: 17px;
+        height: 20px;
+        border: 1px solid red;
+        border-radius: 100%;
+        font-size: 14px;
+        top: 14px;
+        right: 9px;
       }
     }
 
     .res-filter {
-      flex: 1;
-      position: absolute;
-      right: 0;
       margin-block: 0.5rem;
-      border-bottom: 1px solid #c8c1c1c8;
-      padding-bottom: 0.5rem;
+      margin-left: 30px;
+
+      .filter-flex {
+        display: flex;
+        align-items: baseline;
+        .filter-options-list {
+          display: inline-block;
+          width: max-content;
+        }
+      }
+
       .filter-btn {
         cursor: pointer;
-        padding-inline: 0.5rem;
+        padding-inline: 0.3rem;
         border: none;
         background: #fff;
         color: #6c6a67;
         font-size: 0.9rem;
-        font-weight: 400;
+        font-weight: 500;
         &:hover,
         &:focus {
           color: #e87919;
+          transform: scale(1.05);
         }
         &:first-child {
           padding-left: 0;
@@ -61,10 +71,19 @@
           padding-right: 0;
         }
         &.reset-btn {
-          margin-left: 1rem;
+          margin-left: 0.5rem;
           color: #045ab6e0;
           font-weight: 600;
         }
+        &.filter-close-btn {
+          font-weight: 600;
+          color: red;
+        }
+      }
+      .filter-toggle {
+        cursor: pointer;
+        color: #045ab6e0;
+        font-weight: 600;
       }
     }
   }
@@ -75,4 +94,8 @@
     gap: 10px;
     margin-top: 1.5rem;
   }
+}
+
+.backdrop-opacity {
+  opacity: 0.3;
 }
