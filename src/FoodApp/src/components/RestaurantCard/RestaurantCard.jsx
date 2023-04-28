@@ -1,7 +1,7 @@
-import { LOCATION_URL, RESTURANT_IMG_URL } from "../../utils/constants";
-import "./resturantCard.scss";
+import { LOCATION_URL, RESTAURANT_IMG_URL } from "../../utils/constants";
+import "./restaurantCard.scss";
 
-const ResturantCard = ({ card }) => {
+const RestaurantCard = ({ card }) => {
   const {
     name,
     cuisines,
@@ -17,7 +17,7 @@ const ResturantCard = ({ card }) => {
     <div className="res-card">
       <img
         className="res-logo"
-        src={RESTURANT_IMG_URL + "/" + cloudinaryImageId}
+        src={RESTAURANT_IMG_URL + "/" + cloudinaryImageId}
         alt={name}
       />
       <div className="about">
@@ -42,4 +42,4 @@ const ResturantCard = ({ card }) => {
   );
 };
 
-export default ResturantCard;
+export default RestaurantCard;

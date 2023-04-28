@@ -24,7 +24,7 @@
 
 8.  if data changes ui should be changes (these problems solved by library/framework)
 
-9.  local varriables: let resturants=[]; will be similar to react state variables i.e const [resturants] = useState([]); it similar how we assigned value to this variables(default value).
+9.  local varriables: let restaurants=[]; will be similar to react state variables i.e const [restaurants] = useState([]); it similar how we assigned value to this variables(default value).
 10. useState hooks return an array of default state variables and a function to modify the state variables; we can name this function anything; but the standard is use `set` prefix with state varibles name i,e.(res,setRes).
 
             why this state variable is supper powered; it sync the ui and data layer (it update the ui whenever statae variable changes).

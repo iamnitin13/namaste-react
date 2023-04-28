@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import ResturantCard from "../ResturantCard/ResturantCard";
+import RestaurantCard from "../RestaurantCard/RestaurantCard";
 import { useDebounce } from "../../customs/hooks/debounce";
 import CardShimmer from "../shared/CardShimmer";
-import NoResturantFound from "../ResturantCard/NoResturantFound";
+import NoRestaurantFound from "../RestaurantCard/NoRestaurantFound";
 import "./body.scss";
 
 const Body = () => {
   const inputRef = useRef();
 
   //local state variables, whose scope is within the component.
-  const [fetchedResturants, setFetchedResturants] = useState([]);
-  const [resturants, setResturants] = useState([]);
+  const [fetchedRestaurants, setFetchedRestaurants] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
   const [filterToggle, setFilterToggle] = useState(false);
   const [showCancelBtn, setShowCancelBtn] = useState(false);
   const [loadingSpinner, setLoadingSpinner] = useState(false);
@@ -30,9 +30,9 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      const resturantsCard = json?.data?.cards?.[2]?.data?.data?.cards;
-      setFetchedResturants(resturantsCard);
-      setResturants(resturantsCard);
+      const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards;
+      setFetchedRestaurants(restaurantsCard);
+      setRestaurants(restaurantsCard);
     } catch (error) {
       console.error(error);
     } finally {
@@ -40,7 +40,7 @@ const Body = () => {
     }
   };
 
-  // fetch resturants card API
+  // fetch restaurants card API
   useEffect(() => {
     fetchAsyncAPI();
   }, []);
@@ -50,12 +50,12 @@ const Body = () => {
     setLoadingSpinner(true);
   }, [searchText]);
 
-  // set resturants on searched text after debounce time & stop loading spinner
+  // set restaurants on searched text after debounce time & stop loading spinner
   useEffect(() => {
     if (isDirty && debounceSearchText) {
       setShowCancelBtn(true);
-      setResturants(
-        fetchedResturants.filter((card) =>
+      setRestaurants(
+        fetchedRestaurants.filter((card) =>
           card?.data?.name
             .toLowerCase()
             .includes(debounceSearchText.toLowerCase())
@@ -65,7 +65,7 @@ const Body = () => {
     } else if (isDirty && !debounceSearchText) {
       setSearchText("");
       setShowCancelBtn(false);
-      setResturants([...fetchedResturants]);
+      setRestaurants([...fetchedRestaurants]);
       setLoadingSpinner(false);
     }
   }, [debounceSearchText]);
@@ -76,10 +76,10 @@ const Body = () => {
         <div className="res-search">
           <input
             type="text"
-            name="resturant"
+            name="restaurant"
             value={searchText}
             ref={inputRef}
-            placeholder="Type Resturant Name..."
+            placeholder="Type Restaurant Name..."
             onChange={(e) => handleOnChange(e)}
           />
           {showCancelBtn ? (
@@ -96,8 +96,8 @@ const Body = () => {
                   className="filter-btn"
                   style={{ color: "green" }}
                   onClick={() =>
-                    setResturants([
-                      ...fetchedResturants.filter((card) => card?.data?.veg),
+                    setRestaurants([
+                      ...fetchedRestaurants.filter((card) => card?.data?.veg),
                     ])
                   }
                 >
@@ -108,8 +108,8 @@ const Body = () => {
                   className="filter-btn"
                   style={{ color: "#5d0909d4" }}
                   onClick={() =>
-                    setResturants([
-                      ...fetchedResturants.filter(
+                    setRestaurants([
+                      ...fetchedRestaurants.filter(
                         (card) => card?.data?.veg === false
                       ),
                     ])
@@ -121,8 +121,8 @@ const Body = () => {
                 <button
                   className="filter-btn"
                   onClick={() =>
-                    setResturants([
-                      ...fetchedResturants.sort(
+                    setRestaurants([
+                      ...fetchedRestaurants.sort(
                         (cardA, cardB) =>
                           cardB?.data?.avgRating - cardA?.data?.avgRating
                       ),
@@ -134,8 +134,8 @@ const Body = () => {
                 <button
                   className="filter-btn"
                   onClick={() =>
-                    setResturants([
-                      ...fetchedResturants.sort(
+                    setRestaurants([
+                      ...fetchedRestaurants.sort(
                         (cardA, cardB) =>
                           cardA?.data?.avgRating - cardB?.data?.avgRating
                       ),
@@ -147,7 +147,7 @@ const Body = () => {
               </div>
               <button
                 className="filter-btn reset-btn"
-                onClick={() => setResturants([...fetchedResturants])}
+                onClick={() => setRestaurants([...fetchedRestaurants])}
               >
                 RESET
               </button>
@@ -177,15 +177,15 @@ const Body = () => {
 
       {loadingSpinner ? (
         <CardShimmer numOfCard={30} />
-      ) : resturants.length === 0 ? (
-        <NoResturantFound />
+      ) : restaurants.length === 0 ? (
+        <NoRestaurantFound />
       ) : (
         <div className="res-container">
-          {resturants.map(({ data: card }) => {
-            return <ResturantCard card={card} key={card?.id} />;
+          {restaurants.map(({ data: card }) => {
+            return <RestaurantCard card={card} key={card?.id} />;
           })}
 
-          {/* resturant card separate component as it resuable */}
+          {/* restaurant card separate component as it resuable */}
         </div>
       )}
     </div>
