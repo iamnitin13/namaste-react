@@ -13,15 +13,55 @@
 
   .logo-container {
     height: 80px;
+    flex: 1;
     .logo {
       height: 100%;
       cursor: pointer;
     }
   }
-  .nav-items > ul > li {
-    list-style: none;
-    display: inline-block;
-    margin-inline: 0.5rem;
-    cursor: pointer;
+
+  .nav-items {
+    margin-right: 1rem;
+    ul > li {
+      list-style: none;
+      display: inline-block;
+      margin-inline: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .login-btn,
+  .logout-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8a202;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .logout-btn {
+    color: #d52c2c;
+    display: flex;
+    align-items: center;
+
+    .logout-icon {
+      border: 2px solid #000;
+      border-top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      margin-right: 0.3rem;
+
+      div {
+        border-top: 2px solid #000;
+        transform: rotate(90deg);
+        position: relative;
+        top: 2px;
+      }
+    }
   }
 }

@@ -24,3 +24,7 @@
 6.  react will render the component with the old data if given in the useState after that initial render useEffect will be called, it will be called once after the initial render & then if dependecies array changes.
 
 7.  Shimmer effect resemebles the sekleton of actual UI. This is an UX principle of using the sekleton until the actual UI is not loaded, so when the ui loaded user don't feel that something new is loaded as human brain if we see something new accendintly our eyes and brain takes time to process them, where as using shimmer effect principles we show the skeleton of the actual UI , that mean we display the skeleton and when data load ,the skeleton is filled with the data (it look like that in sense and that good ux for the user as they already have an idea that similiar ui will be there once data loaded), as developer presecpect we create the new skeleton component just like how we show loading, ()(`conditional rendering`)so inplace of loading we show the shimmer effect.
+
+8.  Remember inside the curly brackets we can evaluate ay js expression not js statement.
+
+    js expression contain value,operators or anything that will be evaluated one go and return a single value; whereas statement perform the specific actions that control the flow of the expression like for-loop if codition this is an statement
