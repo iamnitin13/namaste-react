@@ -1,0 +1,26 @@
+1.  what is micoservice architecture, monolithic architecture?
+
+        monolithic architecture is based on the having everything inside the sinle application or repositories, that have advantage of only maintaing a single repo, but the disadvantage was we need to build the complete application for a single change either it an api changes or some ui changes or any kind of changes.
+        ex. suppose we have an api's,sms service,notifications service , the ui all these were kept inside the single repository.
+
+         microoservice architecture is based on having mutliple repositories for different services it keep the sepration of concern means each repository is maintained individually and changeing,testing and deployment is easy to do and the repository is maintainabled.
+         ex. suppose we have an api's,sms service,notifications service all these have different repositories and mantained individually and deployed on differnt port. different tech stack can be used for different services. ex ui can be wriiten in react,backend in java,notification in python and so on. These services are all together a different project in itself. they have their own team,set of guidelines,etc.
+
+         How they are connected. these different services are host on different port with the different endpoint with same or different domain name and they call the service with the endpoint name or domain name+endpoint(if domain name is different).
+
+2.  Component render two ways::: 1. state changes 2. props changes.
+
+3.  useEffect is called everytime `after the component re-render`, but that not good way of calling useEffect on every component rerender, so we can control the by passing the `dependencies array,(it will be called once at the starting & then whenever the dependency changes after re-render)` or `empty array that will cause useEffect to be called once` when component loaded.
+
+4.  useEffect take callback function and dependencies array(optional) as an argument. the callback function is called by usEffect not immediately.
+
+5.  CORS:: cross-origin-resource-sharing, browser don't allow web applications to share resources among different web applications;
+    ex. if request from `https://example.com:3000` not allowed to make a request to (ex2.com,api.example.com,example.com:4000,http://example.com:3000), now introducion of cors was to resolve these issues
+
+    HOW IT SHARE RESOURCES::: browser make an optional request or (preflight request) to the another web application that will verify (if the application is safe) and return an additional HTTP header to the application. then application can make a request and share resources, by using the additional HTTP header sent by the requested web application. That will allow cors to share resources.
+
+    ADDITONAL HTTP HEADERS: access control allow origin:`*` (allow all type of domain to share resource)
+
+6.  react will render the component with the old data if given in the useState after that initial render useEffect will be called, it will be called once after the initial render & then if dependecies array changes.
+
+7.  Shimmer effect resemebles the sekleton of actual UI. This is an UX principle of using the sekleton until the actual UI is not loaded, so when the ui loaded user don't feel that something new is loaded as human brain if we see something new accendintly our eyes and brain takes time to process them, where as using shimmer effect principles we show the skeleton of the actual UI , that mean we display the skeleton and when data load ,the skeleton is filled with the data (it look like that in sense and that good ux for the user as they already have an idea that similiar ui will be there once data loaded), as developer presecpect we create the new skeleton component just like how we show loading, ()(`conditional rendering`)so inplace of loading we show the shimmer effect.

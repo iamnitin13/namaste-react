@@ -1,44 +1,74 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ResturantCard from "../ResturantCard/ResturantCard";
-import resturantList from "../../json/resturants.json";
-import "./body.scss";
 import { useDebounce } from "../../customs/hooks/debounce";
-import LoadingSpinner from "../shared/LoadingSpinner";
+import CardShimmer from "../shared/CardShimmer";
+import NoResturantFound from "../ResturantCard/NoResturantFound";
+import "./body.scss";
 
 const Body = () => {
   const inputRef = useRef();
 
   //local state variables, whose scope is within the component.
-  const [resturants, setResturants] = useState([...resturantList.cards]);
+  const [fetchedResturants, setFetchedResturants] = useState([]);
+  const [resturants, setResturants] = useState([]);
   const [filterToggle, setFilterToggle] = useState(false);
   const [showCancelBtn, setShowCancelBtn] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-  const debounceSearchTerm = useDebounce(searchTerm, 1000);
   const [loadingSpinner, setLoadingSpinner] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const debounceSearchText = useDebounce(searchText, 1000);
 
-  const handleOnChange = (e) => setSearchTerm(e.target.value);
+  const handleOnChange = (e) => {
+    setSearchText(e.target.value.trimStart());
+    setIsDirty(true);
+  };
 
+  const fetchAsyncAPI = async () => {
+    setLoadingSpinner(true);
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      const resturantsCard = json?.data?.cards?.[2]?.data?.data?.cards;
+      setFetchedResturants(resturantsCard);
+      setResturants(resturantsCard);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoadingSpinner(false);
+    }
+  };
+
+  // fetch resturants card API
   useEffect(() => {
-    if (searchTerm.trim().length) setLoadingSpinner(true);
-  }, [searchTerm]);
+    fetchAsyncAPI();
+  }, []);
 
+  // load spinner on searchText changes
   useEffect(() => {
-    if (debounceSearchTerm) {
+    setLoadingSpinner(true);
+  }, [searchText]);
+
+  // set resturants on searched text after debounce time & stop loading spinner
+  useEffect(() => {
+    if (isDirty && debounceSearchText) {
       setShowCancelBtn(true);
       setResturants(
-        resturants.filter((card) =>
+        fetchedResturants.filter((card) =>
           card?.data?.name
             .toLowerCase()
-            .includes(debounceSearchTerm.toLowerCase())
+            .includes(debounceSearchText.toLowerCase())
         )
       );
-    } else {
-      inputRef.current.value = null;
+      setLoadingSpinner(false);
+    } else if (isDirty && !debounceSearchText) {
+      setSearchText("");
       setShowCancelBtn(false);
-      setResturants([...resturantList.cards]);
+      setResturants([...fetchedResturants]);
+      setLoadingSpinner(false);
     }
-    setLoadingSpinner(false);
-  }, [debounceSearchTerm]);
+  }, [debounceSearchText]);
 
   return (
     <div className="body">
@@ -47,6 +77,7 @@ const Body = () => {
           <input
             type="text"
             name="resturant"
+            value={searchText}
             ref={inputRef}
             placeholder="Type Resturant Name..."
             onChange={(e) => handleOnChange(e)}
@@ -66,7 +97,7 @@ const Body = () => {
                   style={{ color: "green" }}
                   onClick={() =>
                     setResturants([
-                      ...resturantList.cards.filter((card) => card?.data?.veg),
+                      ...fetchedResturants.filter((card) => card?.data?.veg),
                     ])
                   }
                 >
@@ -78,7 +109,7 @@ const Body = () => {
                   style={{ color: "#5d0909d4" }}
                   onClick={() =>
                     setResturants([
-                      ...resturantList.cards.filter(
+                      ...fetchedResturants.filter(
                         (card) => card?.data?.veg === false
                       ),
                     ])
@@ -91,7 +122,7 @@ const Body = () => {
                   className="filter-btn"
                   onClick={() =>
                     setResturants([
-                      ...resturants.sort(
+                      ...fetchedResturants.sort(
                         (cardA, cardB) =>
                           cardB?.data?.avgRating - cardA?.data?.avgRating
                       ),
@@ -104,7 +135,7 @@ const Body = () => {
                   className="filter-btn"
                   onClick={() =>
                     setResturants([
-                      ...resturants.sort(
+                      ...fetchedResturants.sort(
                         (cardA, cardB) =>
                           cardA?.data?.avgRating - cardB?.data?.avgRating
                       ),
@@ -116,7 +147,7 @@ const Body = () => {
               </div>
               <button
                 className="filter-btn reset-btn"
-                onClick={() => setResturants([...resturantList.cards])}
+                onClick={() => setResturants([...fetchedResturants])}
               >
                 RESET
               </button>
@@ -142,14 +173,21 @@ const Body = () => {
         </div>
       </div>
 
-      {loadingSpinner ? <LoadingSpinner /> : null}
+      {/* using shimmer effect for better user experience */}
 
-      <div className={`res-container ${loadingSpinner && "backdrop-opacity"}`}>
-        {/* resturant card separate component as it resuable */}
-        {resturants.map(({ data: card }) => {
-          return <ResturantCard card={card} key={card?.id} />;
-        })}
-      </div>
+      {loadingSpinner ? (
+        <CardShimmer numOfCard={30} />
+      ) : resturants.length === 0 ? (
+        <NoResturantFound />
+      ) : (
+        <div className="res-container">
+          {resturants.map(({ data: card }) => {
+            return <ResturantCard card={card} key={card?.id} />;
+          })}
+
+          {/* resturant card separate component as it resuable */}
+        </div>
+      )}
     </div>
   );
 };

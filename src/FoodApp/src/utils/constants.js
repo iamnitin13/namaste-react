@@ -7,4 +7,12 @@ const RESTURANT_IMG_URL =
 const LOCATION_URL =
   "https://img.freepik.com/premium-vector/location-point-icon-vector-illustration_9999-17225.jpg?w=2000";
 
-export { LOGO_URL, RESTURANT_IMG_URL, LOCATION_URL };
+const RESTURANT_NOT_FOUND_IMG_URL =
+  "https://c8.alamy.com/comp/2HKY71D/street-cafe-graphic-black-white-sketch-illustration-vector-2HKY71D.jpg";
+
+export {
+  LOGO_URL,
+  RESTURANT_IMG_URL,
+  LOCATION_URL,
+  RESTURANT_NOT_FOUND_IMG_URL,
+};

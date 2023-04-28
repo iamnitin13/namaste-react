@@ -1,0 +1,42 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-shimmer {
+    padding: 2rem;
+
+    .img-shimmer {
+      width: 250px;
+      height: 200px;
+      border-radius: 4px;
+    }
+
+    .card-footer-shimmer {
+      .heading-shimmer {
+        width: 200px;
+        height: 10px;
+        margin-block: 0.5rem;
+      }
+      .sub-heading-shimmer {
+        width: 150px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.shimmer {
+  background: #ddd;
+  animation: shimmer 3s infinite linear forwards;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
