@@ -1,0 +1,29 @@
+1. useEffect will be called after the render, either we pass dependencies array or not , if dependencies array is passed an empty it will be called only once after the render, if dependencies array contain some dependencies it will be called after the render + when any of thing dependencies changes, what happen if we not pass any dependencies array :: in that case it will be called every time the component is rendered but not before the render,only after render.(got it 🤙🏻)
+
+2. Never create a component inside the component, it must be created at the top; it will cause the component creation everytime state change (mean not create the function or class components inside the component creation phase), we can pass the component as custom element (<Sample/> or <Sample></Sample>)
+
+3. Don’t call Hooks inside loops, conditions, or nested functions; it lead to unconditonaly bugs;as react will not aware of the state variables, either they exist or not, hooks are executed in the order in which they are defined and putting any hook inside the condition, loop or nested function ;will cause the other hooks skipped and cause errors.
+
+4. useState is a hooks react gives you to create local state variables inside the function component(never use it outside the functional component, not even in class based component), useHooks provides a way of performing any side-effects that not need on every render, they can be prescribe based on the dependencies when to call the function inside the useHooks.
+
+5. If keep image on local repo `import the image as default import from the source path` as our code is bundler by the webpack or parcel; it treats the import statement as dependency module which further use in minification, optimization, cache busting as these bunlder are finally serve to the browser.
+
+6. Install the router package `npm install react-router-dom` to use routing in react.
+
+7. There are multiple ways to setup the router configuration we will be using the latest one & the most recommended one for all web project using `createBrowserRouter` and config our routes.
+
+8. React-router-dom provides a hooks for the most the usefull cases like showing sepecific error(useRouteError hooks), useLocation hooks,useNavigation hooks. SO there are lot of hooks provided by react-router-dom.
+
+9. useRouteError hooks provide a way to handle route errors on the ui, basically it catches all the route errors ,we can use this piece of information, it also hold to don't throw error on console.
+
+10. SPA (Single Page Application) earlier we use to have multiple page which call network and load data which used to be slow , but now we hav single index.html file the html that will be shown on the browser and data is set to be dynamic using javascript either we use any library or framework.
+
+11. There are 2 types of routing :: 1. Client-side Routing (page server from client side i.e from the browser not any server) 2. Server-side routing (the pages come from server)
+
+12. On client-side routing what we do is just load the content that is already on our client-side on the basis of the route we have by using either brower router api or any framework or library to setup routing in our application & loaded content based on routes.
+
+13. anchor tags are not used in loading component based on routes as it reload the application making the browser DOM to be created again, that will be less performance efficient. SO react-router-dom provide a compoent or a wrapper component to this anchor tag that do the same thing,but won't reload the application.
+
+14. react-router-dom library is maintain by remix not facebook.
+
+15. Link components provided by react-router-dom is at the end is the anchor tag tracked by react-router-dom.
