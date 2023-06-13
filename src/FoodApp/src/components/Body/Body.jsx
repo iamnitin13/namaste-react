@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import RestaurantCard from "../RestaurantCard/RestaurantCard";
+import { useEffect, useMemo, useRef, useState } from "react";
+import RestaurantCard from "../Restaurant/RestaurantCard";
 import { useDebounce } from "../../customs/hooks/debounce";
 import CardShimmer from "../shared/CardShimmer";
-import NoRestaurantFound from "../RestaurantCard/NoRestaurantFound";
+import NoRestaurantFound from "../Restaurant/NoRestaurantFound";
 import "./body.scss";
+import { LAT_LNG, MESSAGE_CARD } from "../../utils/constants";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const inputRef = useRef();
@@ -13,26 +16,77 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [filterToggle, setFilterToggle] = useState(false);
   const [showCancelBtn, setShowCancelBtn] = useState(false);
-  const [loadingSpinner, setLoadingSpinner] = useState(false);
+  const [loadingSpinner, setLoadingSpinner] = useState(true);
   const [isDirty, setIsDirty] = useState(false);
   const [searchText, setSearchText] = useState("");
   const debounceSearchText = useDebounce(searchText, 1000);
+  const [pagIndex, setPageIndex] = useState({ offset: 15, totalSize: 0 });
+
+  const restaurantKeys = useMemo(() => {
+    return [
+      "name",
+      "cuisines",
+      "cloudinaryImageId",
+      "avgRating",
+      "slaString",
+      "costForTwoString",
+      "veg",
+      "address",
+      "id",
+    ];
+  }, [fetchedRestaurants]);
 
   const handleOnChange = (e) => {
-    setSearchText(e.target.value.trimStart());
+    setSearchText(e?.target?.value?.trimStart());
     setIsDirty(true);
   };
 
   const fetchAsyncAPI = async () => {
-    setLoadingSpinner(true);
     try {
       const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING"
+        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&page_type=DESKTOP_WEB_LISTING`,
+        {}
       );
-      const json = await data.json();
-      const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards;
+      const json = await data?.json();
+      const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards?.map(
+        (card) => card?.data
+      );
+
       setFetchedRestaurants(restaurantsCard);
       setRestaurants(restaurantsCard);
+      setPageIndex((prev) => {
+        return {
+          ...prev,
+          totalSize: json?.data?.cards?.[2]?.data?.data?.totalOpenRestaurants,
+        };
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoadingSpinner(false);
+    }
+  };
+
+  // infinite scroll swiggy api for 2second time
+  const fetchInfinite = async () => {
+    try {
+      const data = await fetch(
+        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&offset=${pagIndex?.offset}&page_type=DESKTOP_SEE_ALL_LISTING`
+      );
+      const json = await data?.json();
+      const restaurantsCard = json?.data?.cards
+        ?.filter((card) => card?.data?.cardType !== MESSAGE_CARD)
+        .map((card) => card?.data?.data);
+
+      setFetchedRestaurants((prev) => prev.concat(restaurantsCard));
+      setRestaurants((prev) => prev.concat(restaurantsCard));
+
+      setPageIndex((prev) => {
+        return {
+          ...prev,
+          offset: json?.data?.currentOffset + 16,
+        };
+      });
     } catch (error) {
       console.error(error);
     } finally {
@@ -55,10 +109,10 @@ const Body = () => {
     if (isDirty && debounceSearchText) {
       setShowCancelBtn(true);
       setRestaurants(
-        fetchedRestaurants.filter((card) =>
+        fetchedRestaurants?.filter((card) =>
           card?.data?.name
-            .toLowerCase()
-            .includes(debounceSearchText.toLowerCase())
+            ?.toLowerCase()
+            ?.includes(debounceSearchText?.toLowerCase())
         )
       );
       setLoadingSpinner(false);
@@ -97,7 +151,7 @@ const Body = () => {
                   style={{ color: "green" }}
                   onClick={() =>
                     setRestaurants([
-                      ...fetchedRestaurants.filter((card) => card?.data?.veg),
+                      ...fetchedRestaurants?.filter((card) => card?.data?.veg),
                     ])
                   }
                 >
@@ -109,7 +163,7 @@ const Body = () => {
                   style={{ color: "#5d0909d4" }}
                   onClick={() =>
                     setRestaurants([
-                      ...fetchedRestaurants.filter(
+                      ...fetchedRestaurants?.filter(
                         (card) => card?.data?.veg === false
                       ),
                     ])
@@ -121,12 +175,12 @@ const Body = () => {
                 <button
                   className="filter-btn"
                   onClick={() =>
-                    setRestaurants([
-                      ...fetchedRestaurants.sort(
+                    setRestaurants(
+                      [...fetchedRestaurants]?.sort(
                         (cardA, cardB) =>
                           cardB?.data?.avgRating - cardA?.data?.avgRating
-                      ),
-                    ])
+                      )
+                    )
                   }
                 >
                   Rating: Top to Low
@@ -134,12 +188,12 @@ const Body = () => {
                 <button
                   className="filter-btn"
                   onClick={() =>
-                    setRestaurants([
-                      ...fetchedRestaurants.sort(
+                    setRestaurants(
+                      [...fetchedRestaurants]?.sort(
                         (cardA, cardB) =>
                           cardA?.data?.avgRating - cardB?.data?.avgRating
-                      ),
-                    ])
+                      )
+                    )
                   }
                 >
                   Rating: Low to Top
@@ -152,9 +206,7 @@ const Body = () => {
                 RESET
               </button>
               <button
-                onClick={() => {
-                  setFilterToggle(false);
-                }}
+                onClick={() => setFilterToggle(false)}
                 className="filter-btn filter-close-btn"
               >
                 CLOSE
@@ -163,9 +215,7 @@ const Body = () => {
           ) : (
             <span
               className="filter-toggle"
-              onClick={() => {
-                setFilterToggle(true);
-              }}
+              onClick={() => setFilterToggle(true)}
             >
               Filter
             </span>
@@ -176,17 +226,36 @@ const Body = () => {
       {/* using shimmer effect for better user experience */}
 
       {loadingSpinner ? (
-        <CardShimmer numOfCard={30} />
-      ) : restaurants.length === 0 ? (
+        <CardShimmer numOfCard={20} />
+      ) : restaurants?.length === 0 ? (
         <NoRestaurantFound />
       ) : (
-        <div className="res-container">
-          {restaurants.map(({ data: card }) => {
-            return <RestaurantCard card={card} key={card?.id} />;
-          })}
-
-          {/* restaurant card separate component as it resuable */}
-        </div>
+        <InfiniteScroll
+          dataLength={restaurants?.length}
+          next={fetchInfinite}
+          hasMore={restaurants?.length <= pagIndex?.totalSize}
+          loader={<CardShimmer numOfCard={20} />}
+          style={{ overflow: "none" }}
+        >
+          <div className="res-container">
+            {restaurants
+              ?.filter((restaurant) => {
+                return (
+                  restaurant &&
+                  restaurantKeys.every((key) =>
+                    Object.keys(restaurant).includes(key)
+                  )
+                );
+              })
+              .map((restaurant, index) => {
+                return (
+                  <Link key={index} to={"/restaurants/" + restaurant?.id}>
+                    <RestaurantCard card={restaurant} />
+                  </Link>
+                );
+              })}
+          </div>
+        </InfiniteScroll>
       )}
     </div>
   );

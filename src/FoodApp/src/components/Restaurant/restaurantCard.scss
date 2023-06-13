@@ -15,7 +15,9 @@
   }
 
   .about {
+    position: relative;
     padding-block: 0.5rem;
+    padding-right: 1rem;
     .res-name,
     .res-cusinie,
     .res-food-type {
@@ -28,17 +30,29 @@
       padding-inline-end: 1rem;
     }
 
-    .res-food-type {
+    .food-type-box {
       position: absolute;
-      right: 30px;
+      top: 10px;
+      right: 0;
+      padding: 0.5rem;
       width: 14px;
       height: 14px;
-      border-radius: 100%;
-      &[role="veg"] {
-        background: green;
-      }
-      &[role="non-veg"] {
-        background: #5d0909d4;
+      border: 1px solid;
+      .res-food-type {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(3px, 3px);
+
+        &[role="veg"] {
+          background: green;
+        }
+        &[role="non-veg"] {
+          background: #5d0909d4;
+        }
       }
     }
   }
@@ -74,11 +88,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem 0;
+  padding: 1rem 0;
 
   .no-res-found {
-    width: 500px;
-    clip-path: inset(0 0 40px 0);
+    width: 350px;
+    margin-block-end: 1rem;
+    // clip-path: inset(0 0 40px 0);
   }
   .res-text {
     text-align: center;

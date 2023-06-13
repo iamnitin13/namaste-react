@@ -1,25 +1,39 @@
 import { useState } from "react";
 import { LOGO_URL } from "../../utils/constants";
 import "./header.scss";
-
-// const isLoggedIn = () => {
-//   //TODO: make API call to check if user is authenticated;
-//   return true;
-// };
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [loggedIn, setloggedIn] = useState(true);
 
+  const handleStyle = ({ isActive }) => {
+    return { color: isActive ? "orange" : "inherit" };
+  };
+
   return (
     <div className="header">
       <div className="logo-container">
-        <img src={LOGO_URL} alt="food logo" className="logo" />
+        <Link to="/">
+          <img src={LOGO_URL} alt="food logo" className="logo" />
+        </Link>
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
+          <li>
+            <NavLink to="/" style={handleStyle}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" style={handleStyle}>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" style={handleStyle}>
+              Contact
+            </NavLink>
+          </li>
           <li>Cart</li>
         </ul>
       </div>

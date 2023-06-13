@@ -1,0 +1,18 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .oops-error {
+    font: normal normal 900 9rem caption;
+    background: -webkit-linear-gradient(#cd52cd, #1b94c7, #e47f0b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .err-message {
+    margin-top: 2rem;
+    font: normal normal 300 1.5rem/1rem fantasy;
+  }
+}

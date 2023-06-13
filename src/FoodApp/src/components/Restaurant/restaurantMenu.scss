@@ -1,0 +1,338 @@
+.res-menu-container {
+  padding: 3rem 0 0;
+  width: 800px;
+  margin: 0 auto;
+
+  .res-info {
+    display: flex;
+    margin-block-end: 1rem;
+    align-items: center;
+    .res-img {
+      width: 120px;
+    }
+
+    .info-flex {
+      flex: 2;
+      padding-inline: 1rem;
+      .res-name {
+        font: normal normal 300 1.8rem/1rem serif;
+        padding-block-end: 0.8rem;
+      }
+      .res-cusinie,
+      .res-area-km {
+        font-size: 0.8rem;
+        padding-block-end: 0.1rem;
+        color: #888282;
+      }
+    }
+  }
+
+  .res-rating {
+    box-shadow: 0 2px 8px #b9a3a3;
+    padding: 0.4rem;
+    text-align: center;
+    .rating-point {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    hr {
+      margin-block: 0.5rem;
+    }
+    .total-rating {
+      font-size: 0.7rem;
+      color: #888282;
+    }
+  }
+
+  .res-delivery-msg {
+    padding-block-start: 0.5rem;
+    .res-delivery-icon {
+      height: 18px;
+      width: 18px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+    .message {
+      display: inline-block;
+      vertical-align: top;
+      color: #888282;
+      font-size: 0.9rem;
+      padding-inline-start: 0.5rem;
+    }
+  }
+
+  .res-fare-time {
+    ul {
+      display: flex;
+      li {
+        margin-inline-end: 1rem;
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        .duration-icon,
+        .money-icon {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #000;
+          border-radius: 100%;
+          margin-inline-end: 0.5rem;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+        .duration-icon {
+          background: conic-gradient(#000 250deg, #fff 260deg);
+        }
+      }
+    }
+  }
+
+  .res-menu-coupons {
+    display: flex;
+    width: inherit;
+    overflow-x: scroll;
+    margin-block: 1.5rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .coupons-card {
+      min-width: fit-content;
+      cursor: pointer;
+      border: 1px solid #d9d6d6;
+      border-radius: 8px;
+      margin-inline-end: 1rem;
+      padding: 0.8rem;
+      cursor: pointer;
+
+      .img-text {
+        display: flex;
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          object-fit: cover;
+          margin-inline-end: 0.5rem;
+        }
+        h6 {
+          color: #888282;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+      }
+      .coupon-msg {
+        font-size: 0.8rem;
+        color: #888282;
+        font-weight: 300;
+        padding-block-start: 0.4rem;
+      }
+    }
+  }
+
+  .veg-selection {
+    margin-block: 1rem;
+    display: flex;
+    .veg-text {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .btn-container {
+      width: 45px;
+      height: 22px;
+      background: #d5c7c7;
+      margin-left: 0.5rem;
+      padding: 0.2rem;
+      position: relative;
+      border-radius: 6px;
+      cursor: pointer;
+
+      .block {
+        height: 15px;
+        width: 20px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        border-radius: 4px;
+      }
+      .mvPosBlock {
+        left: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .veg-circle {
+          height: 10px;
+          width: 10px;
+          border-radius: 100%;
+          background: #16a416;
+        }
+      }
+    }
+    .vegSelClass {
+      background: #16a416;
+    }
+  }
+
+  .res-item-container {
+    .filter-container {
+      .filter-title-container {
+        font-size: 1.2rem;
+        font-weight: 800;
+        padding-block: 1rem;
+        color: #3e4152;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        .filter-title {
+          span {
+            margin-inline-start: 0.5rem;
+          }
+        }
+        .arrow-key {
+          font-size: inherit;
+          font-weight: inherit;
+          cursor: pointer;
+        }
+      }
+      .food-item {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .food-type-box {
+          width: 14px;
+          height: 14px;
+          border: 1px solid;
+          padding: 0.5rem;
+          position: absolute;
+          left: 0px;
+          top: 9px;
+          .res-food-type {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            top: 0;
+            left: 0;
+            transform: translate(3px, 3px);
+
+            &[role="veg"] {
+              background: green;
+            }
+            &[role="non-veg"] {
+              background: #5d0909d4;
+            }
+          }
+        }
+
+        .food-content {
+          padding-block-end: 2rem;
+          padding-inline: 1.8rem;
+          .food-name {
+            font-size: 1rem;
+            font-weight: 450;
+            padding-block: 0.5rem 0.3rem;
+          }
+
+          .food-price {
+            font-weight: 300;
+          }
+          .food-description {
+            font-size: 0.9rem;
+            font-weight: 300;
+            padding-block-start: 0.5rem;
+
+            color: #9a9292;
+            word-break: break-word;
+          }
+        }
+        .food-img-contain {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+
+          img {
+            width: 118px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-block-start: 1rem;
+            border: 1px solid lightgray;
+            background: lightgray;
+          }
+          .add-item-btn {
+            text-align: center;
+            color: #16a416;
+            width: 100px;
+            border: 1px solid #0000003b;
+            border-radius: 5px;
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            align-self: center;
+            position: relative;
+            bottom: 20px;
+            margin-block: auto;
+
+            span {
+              position: absolute;
+              bottom: 15px;
+              right: 4px;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .res-item-footer {
+    background: #f1f1f6;
+    margin-block-start: 2rem;
+    padding: 1.5rem;
+    padding-block-end: 8rem;
+
+    .footer-content-first {
+      display: flex;
+      align-items: center;
+      & img {
+        margin-inline-end: 1rem;
+      }
+    }
+
+    .footer-content-second {
+      .name,
+      .area,
+      .location {
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding-block: 0 0.4rem;
+      }
+
+      .area {
+        font-weight: 400;
+      }
+      .location {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 200;
+        margin-block-start: 0.5rem;
+        color: #aba7a7d8;
+        img {
+          margin-inline-end: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+hr {
+  border: 0.5px dashed;
+  color: #c2b9b9;
+  margin-block: 1.5rem;
+  &.dotted-border {
+    border-width: 1px;
+  }
+  &.border-end {
+    margin-block: 1.5rem;
+    border: 8px solid #f1f1f6;
+  }
+}

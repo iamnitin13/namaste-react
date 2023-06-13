@@ -1,4 +1,4 @@
-import { LOCATION_URL, RESTAURANT_IMG_URL } from "../../utils/constants";
+import { LOCATION_URL, getImgUrl } from "../../utils/constants";
 import "./restaurantCard.scss";
 
 const RestaurantCard = ({ card }) => {
@@ -11,19 +11,22 @@ const RestaurantCard = ({ card }) => {
     costForTwoString,
     veg,
     address,
+    id,
   } = card;
 
   return (
     <div className="res-card">
       <img
         className="res-logo"
-        src={RESTAURANT_IMG_URL + "/" + cloudinaryImageId}
+        src={getImgUrl(508, 320) + cloudinaryImageId}
         alt={name}
       />
       <div className="about">
         <h3 className="res-name">{name}</h3>
-        <i className="res-cusinie">{cuisines.join()}</i>
-        <span className="res-food-type" role={veg ? "veg" : "non-veg"} />
+        <i className="res-cusinie">{cuisines?.join()}</i>
+        <div className="food-type-box">
+          <span className="res-food-type" role={veg ? "veg" : "non-veg"} />
+        </div>
       </div>
       <hr />
       <div className="res-info">

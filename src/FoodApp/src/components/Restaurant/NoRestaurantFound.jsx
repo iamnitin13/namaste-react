@@ -1,4 +1,3 @@
-import React from "react";
 import "./restaurantCard.scss";
 import { RESTAURANT_NOT_FOUND_IMG_URL } from "../../utils/constants";
 
@@ -11,7 +10,8 @@ const NoRestaurantFound = () => {
         className="no-res-found"
       />
       <span className="res-text">
-        No Restaurant Found For the given Search....
+        Uh-oh! Looks like the page you are trying to access, doesn't exist.
+        Please start afresh.
       </span>
     </div>
   );

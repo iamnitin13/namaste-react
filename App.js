@@ -99,5 +99,5 @@ root.render(<HeadingComponent />);
 // coding assignment practice use this to render the main.jsx that conatin future comp. and other things...
 root.render(<Main />);
 
-// practing application food application
+// practing application food application (not using now after react-router-dom)
 root.render(<AppLayout />);
