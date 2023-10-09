@@ -5,7 +5,7 @@ import CardShimmer from "../shared/CardShimmer";
 import NoRestaurantFound from "../Restaurant/NoRestaurantFound";
 import "./body.scss";
 import { LAT_LNG, MESSAGE_CARD } from "../../utils/constants";
-import InfiniteScroll from "react-infinite-scroll-component";
+// import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
 
 const Body = () => {
@@ -20,21 +20,21 @@ const Body = () => {
   const [isDirty, setIsDirty] = useState(false);
   const [searchText, setSearchText] = useState("");
   const debounceSearchText = useDebounce(searchText, 1000);
-  const [pagIndex, setPageIndex] = useState({ offset: 15, totalSize: 0 });
+  // const [pagIndex, setPageIndex] = useState({ offset: 15, totalSize: 0 });
 
-  const restaurantKeys = useMemo(() => {
-    return [
-      "name",
-      "cuisines",
-      "cloudinaryImageId",
-      "avgRating",
-      "slaString",
-      "costForTwoString",
-      "veg",
-      "address",
-      "id",
-    ];
-  }, [fetchedRestaurants]);
+  // const restaurantKeys = useMemo(() => {
+  //   return [
+  //     "name",
+  //     "cuisines",
+  //     "cloudinaryImageId",
+  //     "avgRating",
+  //     "slaString",
+  //     "costForTwoString",
+  //     "veg",
+  //     "address",
+  //     "id",
+  //   ];
+  // }, [fetchedRestaurants]);
 
   const handleOnChange = (e) => {
     setSearchText(e?.target?.value?.trimStart());
@@ -44,8 +44,7 @@ const Body = () => {
   const fetchAsyncAPI = async () => {
     try {
       const data = await fetch(
-        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&page_type=DESKTOP_WEB_LISTING`,
-        {}
+        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&page_type=DESKTOP_WEB_LISTING`
       );
       const json = await data?.json();
       const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards?.map(
@@ -54,12 +53,12 @@ const Body = () => {
 
       setFetchedRestaurants(restaurantsCard);
       setRestaurants(restaurantsCard);
-      setPageIndex((prev) => {
-        return {
-          ...prev,
-          totalSize: json?.data?.cards?.[2]?.data?.data?.totalOpenRestaurants,
-        };
-      });
+      // setPageIndex((prev) => {
+      //   return {
+      //     ...prev,
+      //     totalSize: json?.data?.cards?.[2]?.data?.data?.totalOpenRestaurants,
+      //   };
+      // });
     } catch (error) {
       console.error(error);
     } finally {
@@ -68,31 +67,31 @@ const Body = () => {
   };
 
   // infinite scroll swiggy api for 2second time
-  const fetchInfinite = async () => {
-    try {
-      const data = await fetch(
-        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&offset=${pagIndex?.offset}&page_type=DESKTOP_SEE_ALL_LISTING`
-      );
-      const json = await data?.json();
-      const restaurantsCard = json?.data?.cards
-        ?.filter((card) => card?.data?.cardType !== MESSAGE_CARD)
-        .map((card) => card?.data?.data);
+  // const fetchInfinite = async () => {
+  //   try {
+  //     const data = await fetch(
+  //       `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&offset=${pagIndex?.offset}&page_type=DESKTOP_SEE_ALL_LISTING`
+  //     );
+  //     const json = await data?.json();
+  //     const restaurantsCard = json?.data?.cards
+  //       ?.filter((card) => card?.data?.cardType !== MESSAGE_CARD)
+  //       .map((card) => card?.data?.data);
 
-      setFetchedRestaurants((prev) => prev.concat(restaurantsCard));
-      setRestaurants((prev) => prev.concat(restaurantsCard));
+  //     setFetchedRestaurants((prev) => prev.concat(restaurantsCard));
+  //     setRestaurants((prev) => prev.concat(restaurantsCard));
 
-      setPageIndex((prev) => {
-        return {
-          ...prev,
-          offset: json?.data?.currentOffset + 16,
-        };
-      });
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoadingSpinner(false);
-    }
-  };
+  //     setPageIndex((prev) => {
+  //       return {
+  //         ...prev,
+  //         offset: json?.data?.currentOffset + 16,
+  //       };
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //   } finally {
+  //     setLoadingSpinner(false);
+  //   }
+  // };
 
   // fetch restaurants card API
   useEffect(() => {
@@ -230,32 +229,32 @@ const Body = () => {
       ) : restaurants?.length === 0 ? (
         <NoRestaurantFound />
       ) : (
-        <InfiniteScroll
-          dataLength={restaurants?.length}
-          next={fetchInfinite}
-          hasMore={restaurants?.length <= pagIndex?.totalSize}
-          loader={<CardShimmer numOfCard={20} />}
-          style={{ overflow: "none" }}
-        >
-          <div className="res-container">
-            {restaurants
-              ?.filter((restaurant) => {
-                return (
-                  restaurant &&
-                  restaurantKeys.every((key) =>
-                    Object.keys(restaurant).includes(key)
-                  )
-                );
-              })
-              .map((restaurant, index) => {
-                return (
-                  <Link key={index} to={"/restaurants/" + restaurant?.id}>
-                    <RestaurantCard card={restaurant} />
-                  </Link>
-                );
-              })}
-          </div>
-        </InfiniteScroll>
+        // <InfiniteScroll
+        //   dataLength={restaurants?.length}
+        //   next={fetchInfinite}
+        //   hasMore={restaurants?.length <= pagIndex?.totalSize}
+        //   loader={<CardShimmer numOfCard={20} />}
+        //   style={{ overflow: "none" }}
+        // >
+        <div className="res-container">
+          {restaurants
+            // ?.filter((restaurant) => {
+            //   return (
+            //     restaurant &&
+            //     restaurantKeys.every((key) =>
+            //       Object.keys(restaurant).includes(key)
+            //     )
+            //   );
+            // })
+            .map((restaurant, index) => {
+              return (
+                <Link key={index} to={"/restaurants/" + restaurant?.id}>
+                  <RestaurantCard card={restaurant} />
+                </Link>
+              );
+            })}
+        </div>
+        // </InfiniteScroll>
       )}
     </div>
   );

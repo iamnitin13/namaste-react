@@ -1,4 +1,4 @@
-import { Children, Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { LAT_LNG, LOCATION_URL, getImgUrl } from "../../utils/constants";
 import "./restaurantMenu.scss";
@@ -10,9 +10,9 @@ const RestaurantMenu = () => {
   const [loading, setLoading] = useState(true);
   const [offers, setOffers] = useState(null);
   const [items, setItems] = useState(null);
-  const [defaultItems, setDefaultItems] = useState(null);
+  // const [defaultItems, setDefaultItems] = useState(null);
   const [showMenu, setShowMenu] = useState([]);
-  const [isVegSel, setIsVegSel] = useState(false);
+  // const [isVegSel, setIsVegSel] = useState(false);
 
   const getRestaurantInfo = async () => {
     try {
@@ -28,10 +28,10 @@ const RestaurantMenu = () => {
         json?.data?.cards?.[json?.data?.cards?.length - 1]?.groupedCard
           ?.cardGroupMap?.REGULAR?.cards
       );
-      setDefaultItems(
-        json?.data?.cards?.[json?.data?.cards?.length - 1]?.groupedCard
-          ?.cardGroupMap?.REGULAR?.cards
-      );
+      // setDefaultItems(
+      //   json?.data?.cards?.[json?.data?.cards?.length - 1]?.groupedCard
+      //     ?.cardGroupMap?.REGULAR?.cards
+      // );
     } catch (error) {
       console.error(error);
     } finally {
@@ -49,21 +49,30 @@ const RestaurantMenu = () => {
       return [...prev, index];
     });
 
-  const handleVegSelection = () => {
-    if (isVegSel) {
-      setIsVegSel(false);
-      setItems(defaultItems);
-    } else {
-      setIsVegSel(true);
-      const filterItem = defaultItems
-        ?.slice(1, defaultItems?.length - 2)
-        .filter(({ card: { card } }) => {
-          card?.categories;
-        });
-      setItems();
-      console.log(defaultItems);
-    }
-  };
+  // const handleVegSelection = () => {
+  //   if (isVegSel) {
+  //     setIsVegSel(false);
+  //     setItems(defaultItems);
+  //   } else {
+  //     console.log(defaultItems);
+  //     const filterItem = defaultItems
+  //       ?.slice(1, defaultItems?.length - 2)
+  //       .map(({ card: { card } }) =>
+  //         card?.categories
+  //           ? card?.categories.map((category) => category.itemCards)
+  //           : card.itemCards
+  //       );
+  //     // .map((card) => card?.map(({ card }) => card?.info))
+  //     // .map((items) =>
+  //     //   items.filter(
+  //     //     ({ itemAttribute }) => itemAttribute?.vegClassifier === "VEG"
+  //     //   )
+  //     // )
+  //     // .filter((item) => item.length);
+  //     // setIsVegSel(true);
+  //     // setItems(filterItem);
+  //   }
+  // };
 
   const ArrowComponent = ({ showUpArrow }) =>
     showUpArrow ? (
@@ -252,7 +261,8 @@ const RestaurantMenu = () => {
         })}
       </div>
 
-      <div className="veg-selection">
+      {/* TODO: only veg filter */}
+      {/* <div className="veg-selection">
         <div className="veg-text">Veg</div>
         <div
           className={`btn-container ${isVegSel && "vegSelClass"}`}
@@ -262,7 +272,7 @@ const RestaurantMenu = () => {
             {isVegSel ? <div className="veg-circle" /> : null}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <hr />
 
