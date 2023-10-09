@@ -7,13 +7,16 @@ import "./body.scss";
 import { LAT_LNG, MESSAGE_CARD } from "../../utils/constants";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
+import resturantList from "../../json/resturants.json";
 
 const Body = () => {
   const inputRef = useRef();
 
   //local state variables, whose scope is within the component.
-  const [fetchedRestaurants, setFetchedRestaurants] = useState([]);
-  const [restaurants, setRestaurants] = useState([]);
+  const [fetchedRestaurants, setFetchedRestaurants] = useState([
+    ...resturantList.cards,
+  ]);
+  const [restaurants, setRestaurants] = useState([...resturantList.cards]);
   const [filterToggle, setFilterToggle] = useState(false);
   const [showCancelBtn, setShowCancelBtn] = useState(false);
   const [loadingSpinner, setLoadingSpinner] = useState(true);
@@ -41,30 +44,30 @@ const Body = () => {
     setIsDirty(true);
   };
 
-  const fetchAsyncAPI = async () => {
-    try {
-      const data = await fetch(
-        `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&page_type=DESKTOP_WEB_LISTING`
-      );
-      const json = await data?.json();
-      const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards?.map(
-        (card) => card?.data
-      );
+  // const fetchAsyncAPI = async () => {
+  //   try {
+  //     const data = await fetch(
+  //       `https://www.swiggy.com/dapi/restaurants/list/v5?${LAT_LNG}&page_type=DESKTOP_WEB_LISTING`
+  //     );
+  //     const json = await data?.json();
+  //     const restaurantsCard = json?.data?.cards?.[2]?.data?.data?.cards?.map(
+  //       (card) => card?.data
+  //     );
 
-      setFetchedRestaurants(restaurantsCard);
-      setRestaurants(restaurantsCard);
-      // setPageIndex((prev) => {
-      //   return {
-      //     ...prev,
-      //     totalSize: json?.data?.cards?.[2]?.data?.data?.totalOpenRestaurants,
-      //   };
-      // });
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoadingSpinner(false);
-    }
-  };
+  //     setFetchedRestaurants(restaurantsCard);
+  //     setRestaurants(restaurantsCard);
+  //     setPageIndex((prev) => {
+  //       return {
+  //         ...prev,
+  //         totalSize: json?.data?.cards?.[2]?.data?.data?.totalOpenRestaurants,
+  //       };
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //   } finally {
+  //     setLoadingSpinner(false);
+  //   }
+  // };
 
   // infinite scroll swiggy api for 2second time
   // const fetchInfinite = async () => {
@@ -95,7 +98,9 @@ const Body = () => {
 
   // fetch restaurants card API
   useEffect(() => {
-    fetchAsyncAPI();
+    // commented using dummy json restuarant due to change in swiggy api
+    // fetchAsyncAPI();
+    setTimeout(() => setLoadingSpinner(false), 2000);
   }, []);
 
   // load spinner on searchText changes
@@ -246,10 +251,10 @@ const Body = () => {
             //     )
             //   );
             // })
-            .map((restaurant, index) => {
+            .map(({ data: card }, index) => {
               return (
-                <Link key={index} to={"/restaurants/" + restaurant?.id}>
-                  <RestaurantCard card={restaurant} />
+                <Link key={card?.id} to={"/restaurants/" + card?.id}>
+                  <RestaurantCard card={card} />
                 </Link>
               );
             })}
